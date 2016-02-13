@@ -1,0 +1,15 @@
+{
+  "name": "yes",
+  "version": "1.0.0",
+  "description": "command line tool that grabs user information from treehouse api",
+  "main": "yes",
+  "dependencies": {
+    "prompt": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Trace Harris",
+  "license": "ISC"
+}
