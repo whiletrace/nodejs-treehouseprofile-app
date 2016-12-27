@@ -1,21 +1,20 @@
-//we need a simple way to look up users javascript points and info
+// we need a simple way to look up users javascript points and info
 // solution use node.js to connect to treehouse api to print out 
-var https = require("https");
 var http = require("http");
+var https = require('https');
 var prompt = require('prompt');
 
-prompt.start();
+ prompt.start();
 
  prompt.get(['username'], function (err, result) {
-  // reehouseAPI function call that passes username as a method to the parameter result.
-  TreehouseAPI(result.username);
-    
-     });
+ // treehouseAPI function call that passes username as a method to the parameter result.
+   TreehouseAPI(result.username);
+ });
 
 
 // connect to the api url (https://teamtreehouse.com/traceharris.json)
  function TreehouseAPI(username){
-   var request  = https.get("https://teamtreehouse.com/" + username + ".json", function(response){
+   var request  = https.get("https://teamtreehouse.com/" + username + ".json", function(response) {
       var body ="";
   
      //read the data 
@@ -24,7 +23,7 @@ prompt.start();
      });
      
      // parse the data
-    response.on('end', function(){
+    response.on('end', function() {
        if(response.statusCode === 200){
          try {
           var profile = JSON.parse(body);
